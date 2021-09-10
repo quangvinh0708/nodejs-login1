@@ -17,6 +17,11 @@ const mysqlCon = mysql.createConnection({
     database: process.env.DATABASE,
 })
 
+const dburl = process.env.MYSQL_ADDON 
+    ||   'mysql://' + process.env.DATABASE_USER+ ':' + process.env.DATABASE_PASSWORD 
+        + '@localhost/' + process.env.DATABASE
+
+const conn = mysql.createConnection(dburl);
 
 const publicDirectory = path.join(__dirname,'./public');
 // console.log(publicDirectory);
@@ -64,5 +69,5 @@ app.use('/auth/', require('./routes/auth'));
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,() => {
-    console.log("Server started on port 5000!");
+    console.log("Server started on port " + PORT);
 })
