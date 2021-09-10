@@ -18,7 +18,6 @@ const mysqlCon = mysql.createConnection({
 })
 
 
-
 const publicDirectory = path.join(__dirname,'./public');
 // console.log(publicDirectory);
 app.use(express.static(publicDirectory));

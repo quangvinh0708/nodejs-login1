@@ -4,8 +4,10 @@
   "description": "",
   "main": "i1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node i1.js"
+    "dev": "nodemon --inspect i1.js",
+    "start": "node i1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  
   },
   "keywords": [],
   "author": "",
@@ -17,7 +19,9 @@
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.12"
   }
 }
